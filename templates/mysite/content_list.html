@@ -19,40 +19,40 @@
         <!-- Responsive navbar-->
         <nav class="navbar navbar-expand-md">
             <div class="container px-20">
-                <a class="navbar-brand" href="#!">developer.Gaeun</a>
+                <a id="logo" class="navbar-brand" href="#!">developer.Gaeun</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon">
                     </span>
                 </button>
             </div>
         </nav>
-        <!-- Page Content-->
-        <div class="container px-4 px-lg-5">
-            <!-- Heading Row/이미지란-->
-            <div class="row gx-4 gx-lg-5 align-items-center my-5">
-                <div class="col-lg-7">
-                    <img class="img-fluid rounded mb-4 mb-lg-0" src="https://dummyimage.com/900x400/dee2e6/6c757d.jpg" alt="..." />
-                </div>
-                <!---신상품설명란-->
+
+         <!-- Page Content-->
+        <div class="container col gx-4 gx-lg-5"style="background-color: Ivory; border: black;">
+            <!-- Heading Row-->
+            <div id="main" class="row gx-4 gx-lg-5 aign-items-center my-5">
+                <div id="main-img" class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" src="https://dummyimage.com/900x400/dee2e6/6c757d.jpg" alt="..." /></div>
                 <div class="col-lg-5">
                     <h1 class="font-weight-light">Business Name or Tagline</h1>
                     <p>This is a template that is great for small businesses. It doesn't have too much fancy flare to it, but it makes a great use of the standard Bootstrap core components. Feel free to use this template for any project you want!</p>
-                    <a class="btn btn-primary" href="#!">Call to Action!</a>
+                    <a class="btn btn-primary btn-sm" type="button" style="background-color: #DEB887; border: White; color: White;" href="#!">specific code</a>
                 </div>
             </div>
             <!-- Call to Action-->
-            <div class="card text-white bg-secondary my-5 py-4 text-center">
-                <div class="card-body"><p class="text-white m-0">This call to action card is a great place to showcase some important information or display a clever tagline!</p></div>
+            <div class="card text-dark col text-center"style="background-color: Ivory; border: White;">
+                <div class="card-body"><p class="text-dark m-0" style="background-color: LightYellow; color: DimGrey; font-style: italic;">~Update will be continue~</p></div>
             </div>
-            <!-- Content Row-->
-            <div class="row gx-4 gx-lg-5">
+        </div>
+
+        <!-- Content Row-->
+        <div id="contents" class="row gx-4 gx-lg-5">
                 <div class="col-md-4 mb-5">
                     <div class="card h-100">
                         <div class="card-body">
                             <h2 class="card-title">Card One</h2>
                             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem magni quas ex numquam, maxime minus quam molestias corporis quod, ea minima accusamus.</p>
                         </div>
-                        <div class="card-footer"><a class="btn btn-primary btn-sm" href="#!">More Info</a></div>
+                        <div class="card-footer"><a3 class="btn btn-primary btn-sm" href="#!">More Info</a3></div>
                     </div>
                 </div>
                 <div class="col-md-4 mb-5">
@@ -61,7 +61,7 @@
                             <h2 class="card-title">Card Two</h2>
                             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod tenetur ex natus at dolorem enim! Nesciunt pariatur voluptatem sunt quam eaque, vel, non in id dolore voluptates quos eligendi labore.</p>
                         </div>
-                        <div class="card-footer"><a class="btn btn-primary btn-sm" href="#!">More Info</a></div>
+                        <div class="card-footer"><a3 class="btn btn-primary btn-sm" href="#!">More Info</a3></div>
                     </div>
                 </div>
                 <div class="col-md-4 mb-5">
@@ -70,35 +70,47 @@
                             <h2 class="card-title">Card Three</h2>
                             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem magni quas ex numquam, maxime minus quam molestias corporis quod, ea minima accusamus.</p>
                         </div>
-                        <div class="card-footer"><a class="btn btn-primary btn-sm" href="#!">More Info</a></div>
+                        <div class="card-footer"><a3 class="btn btn-primary btn-sm" href="#!">More Info</a3></div>
                     </div>
                 </div>
             </div>
         </div>
         <!-- Footer-->
         <footer class="py-5 bg-dark">
-            <div class="container px-4 px-lg-5"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2021.BootCamp.gaeun</p></div>
+            <div class="container px-4 px-lg-5"><p class="m-0 text-center text-white">Copyright &copy; MY Website 2021.BootCamp.GAEUN</p></div>
         </footer>
     </body>
     <style>
         nav{
         height: 80px;
-        background-color: white;
+        background-color: White;
         font-weight: light;
         }
-        a:link {
+        a#logo:link {
         font-size: 50px;
         font-family: Bookman Old Style;
         font-weight: bold;
         font-variant:small-caps;
         color : #FDC82B;
         }
-        a:visited {
+        a#logo:visited {
         color : #FFE523;
         }
+        a#logo:hover {
+        color : #FCF09B;
+        }
+
         a:hover {
         color : #FCF09B;
         }
-        div.container px-4 px-lg-5
+
+        div#contents {
+        box-sizing: border-box;
+        margin:50px;
+        }
+        div#main{
+        box-sizing: border-box;
+        margin: 30px;
+        }
     </style>
 </html>
