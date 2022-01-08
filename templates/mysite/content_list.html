@@ -26,16 +26,21 @@
                 </button>
             </div>
         </nav>
-
          <!-- Page Content-->
         <div class="container col gx-4 gx-lg-5"style="background-color: Ivory; border: black;">
             <!-- Heading Row-->
-            <div id="main" class="row gx-4 gx-lg-5 aign-items-center my-5">
-                <div id="main-img" class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" src="https://dummyimage.com/900x400/dee2e6/6c757d.jpg" alt="..." /></div>
+            <div id="main" class="row gx-4 gx-lg-5 aign-items-center my-2">
+                <div id="main-img" class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" src="https://cdn.pixabay.com/photo/2015/12/04/14/05/code-1076536__340.jpg"alt="..."style="width:900px; height:400px;"/></div>
                 <div class="col-lg-5">
-                    <h1 class="font-weight-light">Business Name or Tagline</h1>
-                    <p>This is a template that is great for small businesses. It doesn't have too much fancy flare to it, but it makes a great use of the standard Bootstrap core components. Feel free to use this template for any project you want!</p>
-                    <a class="btn btn-primary btn-sm" type="button" style="background-color: #DEB887; border: White; color: White;" href="#!">specific code</a>
+                    {% if content_list %}
+                    {% for content in content_list %}<hr/>
+                    <h1> <a id="mainTitle" href="#!">{{ content.title }}</a></h1>
+                    <h5><a id="mainex">{{ content.content}}</h5>
+                    {% endfor %}
+                    {% else %}
+                    <p>content 가 없습니다.</p>
+                    {% endif %}
+                    <a id="pressB" class="btn btn-primary btn-sm" type="button" style="margin-top: 20px;font-size: 20px;" href="https://github.com/gaeun6883">specific Repository</a>
                 </div>
             </div>
             <!-- Call to Action-->
@@ -49,28 +54,28 @@
                 <div class="col-md-4 mb-5">
                     <div class="card h-100">
                         <div class="card-body">
-                            <h2 class="card-title">Card One</h2>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem magni quas ex numquam, maxime minus quam molestias corporis quod, ea minima accusamus.</p>
+                            <h2 class="card-title">Mentoring</h2>
+                            <p class="card-text">2021.10.22~</br>Solve problem in BaekJoon or Programmers one by one</p>
                         </div>
-                        <div class="card-footer"><a3 class="btn btn-primary btn-sm" href="#!">More Info</a3></div>
+                        <div class="card-footer"><a id="pressB" class="btn btn-primary btn-sm" href="https://github.com/gaeun6883/mentoring">More Info</a></div>
                     </div>
                 </div>
                 <div class="col-md-4 mb-5">
                     <div class="card h-100">
                         <div class="card-body">
-                            <h2 class="card-title">Card Two</h2>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod tenetur ex natus at dolorem enim! Nesciunt pariatur voluptatem sunt quam eaque, vel, non in id dolore voluptates quos eligendi labore.</p>
+                            <h2 class="card-title">BootCamp</h2>
+                            <p class="card-text" style="height: 40px;">2021.1.27~2022.1.24</br>Make website</p>
                         </div>
-                        <div class="card-footer"><a3 class="btn btn-primary btn-sm" href="#!">More Info</a3></div>
+                        <div class="card-footer"><a id="pressB" class="btn btn-primary btn-sm" href="https://github.com/gaeun6883/2021.bootcamp">More Info</a></div>
                     </div>
                 </div>
                 <div class="col-md-4 mb-5">
                     <div class="card h-100">
                         <div class="card-body">
-                            <h2 class="card-title">Card Three</h2>
+                            <h2 class="card-title">What is Next?</h2>
                             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem magni quas ex numquam, maxime minus quam molestias corporis quod, ea minima accusamus.</p>
                         </div>
-                        <div class="card-footer"><a3 class="btn btn-primary btn-sm" href="#!">More Info</a3></div>
+                        <div class="card-footer"><a id="pressB" class="btn btn-primary btn-sm" href="#!">More Info</a></div>
                     </div>
                 </div>
             </div>
@@ -100,17 +105,39 @@
         color : #FCF09B;
         }
 
-        a:hover {
-        color : #FCF09B;
-        }
-
         div#contents {
         box-sizing: border-box;
         margin:50px;
         }
+
         div#main{
         box-sizing: border-box;
-        margin: 30px;
+        margin: 100px;
+        }
+
+        a#pressB {
+        background-color: Wheat;
+        border-style: solid;
+        border-width: 3px;
+        border-color: Wheat;
+        color : White;
+        }
+        a#pressB:hover {
+        background-color : Burlywood;
+        border-color: Burlywood;
+        }
+
+        div#main-img{
+        top: 40px;
+        }
+        a#mainTitle{
+        color: Burlywood;
+        font-size: 60px;
+        font-style:italic;
+        }
+
+        a#mainex{
+        font-size: 20px;
         }
     </style>
 </html>
