@@ -4,20 +4,20 @@
 <!-- Page Content-->
 <div class="container col gx-4 gx-lg-5"style="background-color: Ivory; border: black;">
     <!-- Heading Row-->
-    <div id="main" class="row gx-4 gx-lg-5 aign-items-center my-2">
-        <div id="main-img" class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" src="https://cdn.pixabay.com/photo/2015/12/04/14/05/code-1076536__340.jpg"alt="..."style="width:900px; height:400px;"/></div>
-                <div class="col-lg-5">
-                    {% if content_list %}
-                    {% for content in content_list %}<hr/>
-                    <h1> <a id="mainTitle" href="#!">{{ content.title }}</a></h1>
-                    <h5><a id="mainex">{{ content.content | truncatewords:30}}</h5>
-                    {% endfor %}
-                    {% else %}
-                    <p>content 가 없습니다.</p>
-                    {% endif %}
-                    <a id="pressB" class="btn btn-primary btn-sm" type="button" style="margin-top: 20px;font-size: 20px;" href="http://localhost:8000/mysite/1/">Detail Explanation</a>
+    {% if content_list %}
+        {% for content in content_list %}
+          <div id="main" class="row gx-4 gx-lg-5 aign-items-center my-2">
+              <div id="main-img" class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" src="https://dummyimage.com/900x400/dee2e6/6c757d.jpg"alt="..."style="width:900px; height:400px;"/></div>
+                <div class="col-lg-5"style="margin-top: 40px;">
+                    <h1> <a id="mainTitle" style="margin: 10px;">{{ content.title }}</a></h1>
+                    <p><a id="mainex">{{ content.content | truncatewords:30}}</p>
+                    <a id="pressB" class="btn btn-primary btn-sm" type="button" style="margin-top: 20px;font-size: 20px;"  href="{% url 'detail' content.id %}">Detail Explanation</a>
                 </div>
-            </div>
+          </div>
+        {% endfor %}
+    {% else %}
+        <p>content가 없습니다.</p>
+    {% endif %}
             <!-- Call to Action-->
             <div class="card text-dark col text-center"style="background-color: Ivory; border: White;">
                 <div class="card-body"><p class="text-dark m-0" style="background-color: LightYellow; color: DimGrey; font-style: italic;">~Update will be continue~</p></div>
