@@ -1,46 +1,21 @@
-<!DOCTYPE html>
-{% load static %}
-<html lang="ko">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Small Business - Start Bootstrap Template</title>
-
-        <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
-        <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}">
-    </head>
-
-    <body>
-        <!-- Responsive navbar-->
-        <nav class="navbar navbar-expand-md">
-            <div class="container px-20">
-                <a id="logo" class="navbar-brand" href="#!">developer.Gaeun</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon">
-                    </span>
-                </button>
-            </div>
-        </nav>
-         <!-- Page Content-->
-        <div class="container col gx-4 gx-lg-5"style="background-color: Ivory; border: black;">
-            <!-- Heading Row-->
-            <div id="main" class="row gx-4 gx-lg-5 aign-items-center my-2">
-                <div id="main-img" class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" src="https://cdn.pixabay.com/photo/2015/12/04/14/05/code-1076536__340.jpg"alt="..."style="width:900px; height:400px;"/></div>
+<body>
+{% extends 'base.html' %}
+{% block content %}
+<!-- Page Content-->
+<div class="container col gx-4 gx-lg-5"style="background-color: Ivory; border: black;">
+    <!-- Heading Row-->
+    <div id="main" class="row gx-4 gx-lg-5 aign-items-center my-2">
+        <div id="main-img" class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" src="https://cdn.pixabay.com/photo/2015/12/04/14/05/code-1076536__340.jpg"alt="..."style="width:900px; height:400px;"/></div>
                 <div class="col-lg-5">
                     {% if content_list %}
                     {% for content in content_list %}<hr/>
                     <h1> <a id="mainTitle" href="#!">{{ content.title }}</a></h1>
-                    <h5><a id="mainex">{{ content.content}}</h5>
+                    <h5><a id="mainex">{{ content.content | truncatewords:30}}</h5>
                     {% endfor %}
                     {% else %}
                     <p>content 가 없습니다.</p>
                     {% endif %}
-                    <a id="pressB" class="btn btn-primary btn-sm" type="button" style="margin-top: 20px;font-size: 20px;" href="https://github.com/gaeun6883">specific Repository</a>
+                    <a id="pressB" class="btn btn-primary btn-sm" type="button" style="margin-top: 20px;font-size: 20px;" href="http://localhost:8000/mysite/1/">Detail Explanation</a>
                 </div>
             </div>
             <!-- Call to Action-->
@@ -57,7 +32,7 @@
                             <h2 class="card-title">Mentoring</h2>
                             <p class="card-text">2021.10.22~</br>Solve problem in BaekJoon or Programmers one by one</p>
                         </div>
-                        <div class="card-footer"><a id="pressB" class="btn btn-primary btn-sm" href="https://github.com/gaeun6883/mentoring">More Info</a></div>
+                        <div class="card-footer"><a id="press1" class="btn btn-primary btn-sm" href="https://github.com/gaeun6883/mentoring">More Info</a></div>
                     </div>
                 </div>
                 <div class="col-md-4 mb-5">
@@ -66,7 +41,7 @@
                             <h2 class="card-title">BootCamp</h2>
                             <p class="card-text" style="height: 40px;">2021.1.27~2022.1.24</br>Make website</p>
                         </div>
-                        <div class="card-footer"><a id="pressB" class="btn btn-primary btn-sm" href="https://github.com/gaeun6883/2021.bootcamp">More Info</a></div>
+                        <div class="card-footer"><a id="press2" class="btn btn-primary btn-sm" href="https://github.com/gaeun6883/2021.bootcamp">More Info</a></div>
                     </div>
                 </div>
                 <div class="col-md-4 mb-5">
@@ -75,69 +50,10 @@
                             <h2 class="card-title">What is Next?</h2>
                             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem magni quas ex numquam, maxime minus quam molestias corporis quod, ea minima accusamus.</p>
                         </div>
-                        <div class="card-footer"><a id="pressB" class="btn btn-primary btn-sm" href="#!">More Info</a></div>
+                        <div class="card-footer"><a id="press3" class="btn btn-primary btn-sm" href="#!">More Info</a></div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Footer-->
-        <footer class="py-5 bg-dark">
-            <div class="container px-4 px-lg-5"><p class="m-0 text-center text-white">Copyright &copy; MY Website 2021.BootCamp.GAEUN</p></div>
-        </footer>
-    </body>
-    <style>
-        nav{
-        height: 80px;
-        background-color: White;
-        font-weight: light;
-        }
-        a#logo:link {
-        font-size: 50px;
-        font-family: Bookman Old Style;
-        font-weight: bold;
-        font-variant:small-caps;
-        color : #FDC82B;
-        }
-        a#logo:visited {
-        color : #FFE523;
-        }
-        a#logo:hover {
-        color : #FCF09B;
-        }
-
-        div#contents {
-        box-sizing: border-box;
-        margin:50px;
-        }
-
-        div#main{
-        box-sizing: border-box;
-        margin: 100px;
-        }
-
-        a#pressB {
-        background-color: Wheat;
-        border-style: solid;
-        border-width: 3px;
-        border-color: Wheat;
-        color : White;
-        }
-        a#pressB:hover {
-        background-color : Burlywood;
-        border-color: Burlywood;
-        }
-
-        div#main-img{
-        top: 40px;
-        }
-        a#mainTitle{
-        color: Burlywood;
-        font-size: 60px;
-        font-style:italic;
-        }
-
-        a#mainex{
-        font-size: 20px;
-        }
-    </style>
-</html>
+         {% endblock %}
+</body>
