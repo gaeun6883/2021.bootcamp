@@ -1,0 +1,107 @@
+        <!-- Responsive navbar-->
+        <nav class="navbar navbar-expand-md">
+            <div class="container px-20">
+                <a id="logo" class="navbar-brand" href="#!">developer.Gaeun</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon">
+                            <li class="nav-item"><a class="nav-link" href="/mysite/">product</a></li>
+                            {% if user.is_authenticated %}
+                            <li class="nav-item"><a class="nav-link" href="{% url
+                            'accounts:logout' %}">{{ user.username }} (logout)</a></li>
+                            {% else %}
+                            <li class="nav-item"><a class="nav-link" href="{% url 'accounts:login' %}">login</a></li>
+                            {% endif %}
+
+                    </span>
+                </button>
+            </div>
+        </nav>
+    <style>
+        nav{
+        height: 80px;
+        background-color: White;
+        font-weight: light;
+        }
+        a#logo:link {
+        font-size: 50px;
+        font-family: Bookman Old Style;
+        font-weight: bold;
+        font-variant:small-caps;
+        color : #FDC82B;
+        }
+        a#logo:visited {
+        color : #FFE523;
+        }
+        a#logo:hover {
+        color : #FCF09B;
+        }
+         div#contents {
+        box-sizing: border-box;
+        margin:50px;
+        }
+
+        div#main{
+        box-sizing: border-box;
+        margin: 100px;
+        }
+
+        a#pressB {
+        background-color: Wheat;
+        border-style: solid;
+        border-width: 3px;
+        border-color: Wheat;
+        color : White;
+        }
+        a#pressB:hover {
+        background-color : Burlywood;
+        border-color: Burlywood;
+        }
+        a#press1 {
+        background-color: Wheat;
+        border-style: solid;
+        border-width: 3px;
+        border-color: Wheat;
+        color : White;
+        }
+        a#press1:hover {
+        background-color : Burlywood;
+        border-color: Burlywood;
+        }
+
+        a#press2 {
+        background-color: Wheat;
+        border-style: solid;
+        border-width: 3px;
+        border-color: Wheat;
+        color : White;
+        }
+        a#press2:hover {
+        background-color : Burlywood;
+        border-color: Burlywood;
+        }
+
+        a#press3 {
+        background-color: Wheat;
+        border-style: solid;
+        border-width: 3px;
+        border-color: Wheat;
+        color : White;
+        }
+        a#press3:hover {
+        background-color : Burlywood;
+        border-color: Burlywood;
+        }
+
+        div#main-img{
+        top: 40px;
+        }
+        a#mainTitle{
+        color: Burlywood;
+        font-size: 60px;
+        font-style:italic;
+        }
+
+        a#mainex{
+        font-size: 20px;
+        }
+    </style>
