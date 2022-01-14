@@ -1,29 +1,32 @@
         <!-- Responsive navbar-->
         <nav class="navbar navbar-expand-md">
-            <div class="container px-20">
-                <a id="logo" class="navbar-brand" href="#!">developer.Gaeun</a>
+            <div class="container px-5">
+                <a id="logo" class="navbar-brand" href="http://localhost:8000/company/">developer.Gaeun</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon">
-                            <li class="nav-item"><a class="nav-link" href="/mysite/">product</a></li>
-                            {% if user.is_authenticated %}
-                            <li class="nav-item"><a class="nav-link" href="{% url
-                            'accounts:logout' %}">{{ user.username }} (logout)</a></li>
-                            {% else %}
-                            <li class="nav-item"><a class="nav-link" href="{% url 'accounts:login' %}">login</a></li>
-                            {% endif %}
-
-                    </span>
+                    <span class="navbar-toggler-icon"></span>
                 </button>
+                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a id="home" class="nav-link active" aria-current="page" href="http://localhost:8000/">Home</a></li>
+                        <li class="nav-item"><a id="product" class="nav-link active" aria-current="page" href="http://localhost:8000/mysite/">Product</a></li>
+                        {% if user.is_authenticated %}
+                        <li class="nav-item"><a id="login" class="nav-link" href="{% url 'accounts:logout' %}">{{ user.username }} (logout)</a></li>
+                        {% else %}
+                        <li class="nav-item"><a id="logout" class="nav-link" href="{% url 'accounts:login' %}">login</a></li>
+                        {% endif %}
+
+                    </ul>
+                </div>
             </div>
         </nav>
     <style>
         nav{
-        height: 80px;
+        height: 90px;
         background-color: White;
         font-weight: light;
         }
         a#logo:link {
-        font-size: 50px;
+        font-size: 60px;
         font-family: Bookman Old Style;
         font-weight: bold;
         font-variant:small-caps;
@@ -104,4 +107,42 @@
         a#mainex{
         font-size: 20px;
         }
+
+        a#home {
+        color: DimGrey;
+        font-size: 20px;
+        }
+        a#home:hover {
+        color: black;
+        font-style: italic;
+        font-weight: bold;
+        }
+        a#product {
+        color: DimGrey;
+        font-size: 20px;
+        }
+        a#product:hover {
+        color: black;
+        font-style: italic;
+        font-weight: bold;
+        }
+        a#login {
+        color: DimGrey;
+        font-size: 20px;
+        }
+        a#lohin:hover {
+        color: black;
+        font-style: italic;
+        font-weight: bold;
+        }
+        a#logout {
+        color: DimGrey;
+        font-size: 20px;
+        }
+        a#logout:hover {
+        color: black;
+        font-style: italic;
+        font-weight: bold;
+        }
+
     </style>
