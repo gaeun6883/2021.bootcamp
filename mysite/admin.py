@@ -2,6 +2,22 @@ from django.contrib import admin
 
 # Register your models here.
 from django.contrib import admin
-from .models import MainContent
+from .models import MainContent, Comment, Post, Photo
 
-admin.site.register(MainContent)
+class MainContentAdmin(admin.ModelAdmin):
+    list_display = ['title', 'content', 'pub_date']
+    search_fields = ['title']
+
+class CommentAdmin(admin.ModelAdmin):
+    list_display = ['content_list', 'content', 'author', 'create_date', 'modify_date']
+    search_fields = ['author']
+
+class PhotoInline(admin.TabularInline):
+    model = Photo
+
+class PostAdmin(admin.ModelAdmin):
+    inlines = [PhotoInline, ]
+
+admin.site.register(MainContent, MainContentAdmin)
+admin.site.register(Comment, CommentAdmin)
+admin.site.register(Post, PostAdmin)
