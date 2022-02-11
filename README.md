@@ -10,3 +10,10 @@ django project
 
 ## -실제 구성 화면
     
+https://user-images.githubusercontent.com/93725108/153582224-085a3e7b-3cc7-44ff-bf96-28f07355316c.PNG
+https://user-images.githubusercontent.com/93725108/153582230-c5a1a6e9-b48e-43d6-af39-b0236b245baf.PNG
+https://user-images.githubusercontent.com/93725108/153582237-93de12e6-91cb-4586-9606-295a5aba2328.PNG
+https://user-images.githubusercontent.com/93725108/153582261-018bee30-edbd-41be-a9ce-f1909fb6a1b2.PNG
+https://user-images.githubusercontent.com/93725108/153582276-e603aceb-9e8f-478f-945a-27e0f0313440.PNG
+https://user-images.githubusercontent.com/93725108/153582282-5cf9eacd-28f7-4e99-9e80-7a545c8e66e0.PNG
+https://user-images.githubusercontent.com/93725108/153582297-c248ac3f-fe87-413c-aff3-c8bbd665e363.PNG
