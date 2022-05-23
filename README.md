@@ -1,5 +1,5 @@
 # 2021.bootcamp
-django project
+django project.make company introduciton website
 
 ## -project 일정
    2021.12.17 부트 캠프 시작, 직업 강의 </br>
